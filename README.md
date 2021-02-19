@@ -5,12 +5,6 @@
 
 The project is designed to provide software for training in a gym. The software offers the tools you need to change: clients with their training, subscription, fitness and fitness plans.
 
-- Type some Markdown on the left
-- See HTML in the right
-- ✨Magic ✨
-
-## Requirements
-
 ## Different user roles :
 - Admin: user with all the permissions
 - Instructor: using which you can compile and modify your schematic
