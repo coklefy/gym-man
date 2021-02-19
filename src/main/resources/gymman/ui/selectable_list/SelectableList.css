@@ -1,0 +1,30 @@
+.item {
+    -fx-background-color: #ffffff;
+    -fx-padding: 8;
+}
+
+.item:odd {
+    -fx-background-color: #dedede;
+}
+
+.item .item__button--remove {
+    visibility: hidden;
+}
+
+.item__button {
+    -fx-cursor: hand;
+}
+
+.item--selected {
+    -fx-background-color: rgb(205, 255, 200);
+}
+.item--selected .item__button--select {
+    visibility: hidden !important;
+}
+.item--selected .item__button--remove {
+    visibility: visible !important;
+}
+
+.item__button__icon:hover {
+    -fx-fill: #ff0000;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root minHeight="50.0" stylesheets="@SelectableList.css" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <javafx.scene.control.ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minViewportHeight="50.0" minWidth="-Infinity" prefHeight="-Infinity" prefWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox spacing="16.0">
+               <children>
+                  <VBox fx:id="lstSelected" styleClass="list-selected" />
+                  <VBox fx:id="lstAvailable" styleClass="list-available" />
+               </children>
+            </VBox>
+         </content>
+      </javafx.scene.control.ScrollPane>
+   </children>
+</fx:root>

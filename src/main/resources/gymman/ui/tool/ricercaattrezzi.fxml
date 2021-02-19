@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <GridPane hgap="16.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="792.0" minWidth="10.0" percentWidth="80.0" prefWidth="754.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="536.0" minWidth="10.0" prefWidth="330.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <padding>
+            <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+         </padding>
+         <children>
+            <TextField id="txtfind" fx:id="txtSearch" onKeyReleased="#onSearchTextChanged" prefHeight="39.0" prefWidth="303.0" promptText="Ricerca Attrezzo...">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button id="btnnewtool" fx:id="btnNewTool" mnemonicParsing="false" onAction="#onNewToolsClicked" text="Nuovo Attrezzo" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="lstTools" layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="143.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="14.0">
+              <columns>
+                <TableColumn fx:id="colName" prefWidth="128.6666316986084" text="Nome" />
+                <TableColumn fx:id="colDescription" prefWidth="193.9999237060547" text="Descrizione" />
+               <TableColumn fx:id="colSerial" prefWidth="122.0" text="Seriale" />
+               <TableColumn fx:id="colMaintenance" prefWidth="121.33334350585938" text="Manutenzione" />
+               <TableColumn fx:id="colButtons" prefWidth="120.00006103515625" text="" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

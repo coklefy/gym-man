@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="250.0" spacing="16.0" styleClass="card" type="VBox" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="txtName" text="">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtBirthdate" text="" />
+      <Label fx:id="txtFiscalCode" text="" />
+      <Label fx:id="txtPhone" text="" />
+      <Label fx:id="txtAddress" text="" />
+      <HBox alignment="BOTTOM_CENTER" spacing="16.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="btnEdit" mnemonicParsing="false" onMouseClicked="#btnEditClicked" text="Modifica" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onMouseClicked="#btnDeleteClicked" text="Elimina" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+   </padding>
+</fx:root>

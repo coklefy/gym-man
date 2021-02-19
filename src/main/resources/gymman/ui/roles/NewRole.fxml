@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import gymman.ui.selectable_list.SelectableList?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.202" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="228.0" layoutY="15.0" prefHeight="675.0" prefWidth="469.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="16.0">
+         <children>
+            <VBox spacing="4.0">
+               <children>
+                  <Label text="Nome" />
+                  <TextField fx:id="txtName" maxWidth="300.0" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </VBox>
+            <VBox spacing="4.0">
+               <children>
+                  <Label text="Descrizione" />
+                  <TextArea fx:id="txtDescription" minHeight="60.0" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </VBox>
+            <VBox spacing="4.0">
+               <children>
+                  <Label text="Permessi" />
+                  <SelectableList fx:id="lstPermissions" minHeight="200.0" maxWidth="550.0" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="76.0" spacing="4.0">
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+               <children>
+                  <Button fx:id="btnSave" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onMouseClicked="#onSaveClicked" text="Salva" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

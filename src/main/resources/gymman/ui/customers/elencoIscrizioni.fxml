@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="503.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="24.0" layoutY="24.0" spacing="16.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="24.0">
+         <children>
+            <TableView fx:id="registrationTable" onMouseClicked="#setRegistrationInfo" prefHeight="455.0" prefWidth="679.0" HBox.hgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="subscriptionCol" prefWidth="275.0" text="Tipologia abbonamento" />
+                <TableColumn fx:id="lastDayCol" minWidth="0.0" prefWidth="275.0" text="Scadenza" />
+                  <TableColumn fx:id="buttonsCol" minWidth="0.0" prefWidth="275.0" />
+              </columns>
+            </TableView>
+            <HBox fillHeight="false" prefWidth="240.0">
+               <children>
+                  <VBox prefHeight="98.0" prefWidth="113.0" spacing="16.0">
+                     <children>
+                        <Label text="Data di inizio" />
+                        <Label prefHeight="18.0" prefWidth="122.0" text="Durata(mesi)" />
+                        <Label prefHeight="18.0" prefWidth="133.0" text="Prezzo totale(€)" />
+                        <Label prefHeight="18.0" prefWidth="127.0" text="Sconto" />
+                        <Label text="Servizi aggiuntivi" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="98.0" prefWidth="121.0" spacing="16.0">
+                     <children>
+                        <Label fx:id="lbSigninDate" />
+                        <Label fx:id="lbDuration" prefHeight="18.0" prefWidth="128.0" />
+                        <Label fx:id="lbPrice" prefHeight="18.0" prefWidth="115.0" />
+                        <Label fx:id="lbDiscount" prefHeight="18.0" prefWidth="121.0" />
+                        <VBox fx:id="vboxService" prefHeight="200.0" prefWidth="100.0" spacing="16.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet trainingProgram_interface.css?>
+
+<VBox id="trainingProgram" alignment="CENTER" minWidth="853.0" prefHeight="-1.0" prefWidth="-1.0" spacing="5.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <HBox id="HBox" alignment="CENTER" prefHeight="205.0" prefWidth="841.0" spacing="5.0">
+      <children>
+        <AnchorPane id="AnchorPane" prefHeight="186.0" prefWidth="811.0">
+          <children>
+            <Label fx:id="customerName" layoutX="213.0" layoutY="31.0" text="">
+              <font>
+                <Font name="Corbel Bold" size="17.0" />
+              </font>
+              <textFill>
+                <Color blue="0.149" green="0.141" red="0.129" fx:id="x1" />
+              </textFill>
+            </Label>
+            <ImageView fitHeight="54.0" fitWidth="60.0" layoutX="417.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@images/avatar-img01.png" />
+              </image>
+            </ImageView>
+            <Text fill="$x1" layoutX="54.0" layoutY="89.0" scaleX="1.0" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CF : ">
+              <font>
+                <Font name="System Bold" size="12.0" fx:id="x2" />
+              </font>
+            </Text>
+            <Label id="codicefiscaleLabel" fx:id="cfLabel" font="$x2" layoutX="89.0" layoutY="73.0" prefHeight="20.0" prefWidth="232.0" text="" textFill="$x1" />
+            <Text fill="$x1" font="$x2" layoutX="54.0" layoutY="63.0" scaleX="1.0" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tel :" wrappingWidth="68.0" />
+            <Label fx:id="contactLabel" font="$x2" layoutX="89.0" layoutY="50.0" prefHeight="21.0" prefWidth="115.0" text="" textFill="$x1" />
+            <Text fill="$x1" font="$x2" layoutX="527.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durata del programa :" />
+            <Label fx:id="durationLabel" font="$x2" layoutX="657.0" layoutY="51.0" prefHeight="21.0" prefWidth="100.0" text="" textFill="$x1" />
+            <Text fill="$x1" font="$x2" layoutX="54.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo abbonamento :" />
+            <Label fx:id="typeLabel" font="$x2" layoutX="175.0" layoutY="120.0" prefHeight="20.0" prefWidth="153.6" text="" textFill="$x1" />
+            <Text fill="$x1" font="$x2" layoutX="54.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal :" wrappingWidth="68.0" />
+            <Label fx:id="goalLabel" font="$x2" layoutX="96.0" layoutY="97.0" prefHeight="21.0" prefWidth="209.0" text="" textFill="$x1" />
+            <Text fill="$x1" font="$x2" layoutX="527.0" layoutY="86.0" scaleX="1.0" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dal :" wrappingWidth="0.0" />
+            <Label fx:id="validFromLabel" font="$x2" layoutX="563.0" layoutY="70.0" prefHeight="21.0" prefWidth="181.0" text="" textFill="$x1" />
+            <Label fx:id="validToLabel" font="$x2" layoutX="560.0" layoutY="91.0" prefHeight="21.0" prefWidth="153.6" text="" textFill="$x1" />
+            <Text fill="$x1" font="$x2" layoutX="527.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Istruttore :" wrappingWidth="68.0" />
+            <Label fx:id="instructorLabel" font="$x2" layoutX="595.0" layoutY="113.0" prefHeight="21.0" prefWidth="198.0" text="" textFill="$x1" />
+            <Text fill="#212426" font="$x2" layoutX="527.0" layoutY="108.0" scaleX="1.0" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al :" wrappingWidth="0.0" />
+            <ImageView fx:id="editIcon" fitHeight="31.0" fitWidth="31.0" layoutX="742.0" layoutY="16.0" onMouseClicked="#editTrainingProgram" pickOnBounds="true" preserveRatio="true">
+              <effect>
+                <Lighting>
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant color="#c7afaf" />
+                  </light>
+                </Lighting>
+              </effect>
+              <image>
+                <Image url="@images/icons/icons8-edit-80.png" />
+              </image>
+            </ImageView>
+            <Label layoutX="332.0" layoutY="163.0" text="Lista degli esercizi">
+              <font>
+                <Font name="System Bold Italic" size="15.0" />
+              </font>
+            </Label>
+          </children>
+          <HBox.margin>
+            <Insets left="15.0" right="15.0" />
+          </HBox.margin>
+        </AnchorPane>
+      </children>
+    </HBox>
+    <HBox id="lineContainer" blendMode="SRC_OVER" minHeight="4.0" prefHeight="4.0" prefWidth="841.0" />
+    <HBox id="HBox" alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="5.0">
+      <children>
+        <ScrollPane id="scrollPane" fitToWidth="true" prefHeight="-1.0" prefWidth="666.0">
+          <content>
+            <FlowPane id="exercisesContainer" fx:id="exContainer" alignment="TOP_CENTER" hgap="10.0" maxWidth="-1.0" minHeight="-1.0" prefHeight="-1.0" prefWidth="-1.0" vgap="10.0">
+              <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </padding>
+            </FlowPane>
+          </content>
+          <effect>
+            <Bloom threshold="0.9814814814814814" />
+          </effect>
+        </ScrollPane>
+      </children>
+      <VBox.margin>
+        <Insets bottom="5.0" top="5.0" />
+      </VBox.margin>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@instructor_interface.css" />
+    <URL value="@trainingProgram_interface.css" />
+  </stylesheets>
+</VBox>

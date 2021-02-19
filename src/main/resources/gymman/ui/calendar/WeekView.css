@@ -1,0 +1,4 @@
+.calendar-cell {
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px 2px 1px 2px;
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import gymman.ui.selectable_list.SelectableList?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="847.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="form" layoutX="40.0" layoutY="30.0" spacing="32.0">
+         <children>
+            <VBox spacing="16.0">
+               <children>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label fx:id="lbCustomer" prefHeight="18.0" prefWidth="296.0" text="Cliente">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbBirthDate" text="Data di nascita" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Durata(in mesi)" />
+                        <TextField fx:id="txfDuration" onKeyReleased="#onTextChange" prefHeight="26.0" prefWidth="174.0" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Giorno d'inizio" />
+                        <DatePicker fx:id="dtpStartDay" onAction="#onTextChange" onMousePressed="#onTextChange" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Sconto" />
+                        <HBox>
+                           <children>
+                              <TextField fx:id="txfDiscount" onKeyReleased="#onTextChange" prefHeight="26.0" prefWidth="174.0" />
+                              <Label text="\%" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox spacing="16.0">
+               <children>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Tipologia abbonamento" />
+                        <ComboBox fx:id="cmbSubscription" onAction="#onTextChange" onMousePressed="#onTextChange" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Servizi aggiuntivi" />
+                        <SelectableList fx:id="lstAdditionalService" onMousePressed="#onTextChange" prefHeight="95.0" prefWidth="438.0" />
+                     </children>
+                  </VBox>
+                  <HBox>
+                     <children>
+                        <Button fx:id="btnCreate" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#create" text="Crea" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

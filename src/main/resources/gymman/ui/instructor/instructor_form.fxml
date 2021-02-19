@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox id="HBox" alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="5.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <VBox id="VBox" alignment="CENTER" spacing="5.0">
+      <children>
+        <HBox prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <Label prefHeight="25.0" prefWidth="377.0" text="Seleziona uno dei clienti per vedere la sua scheda.">
+              <font>
+                <Font name="System Italic" size="15.0" />
+              </font>
+              <HBox.margin>
+                <Insets left="10.0" fx:id="x2" />
+              </HBox.margin>
+            </Label>
+          </children>
+        </HBox>
+        <HBox prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <TextField fx:id="searchInputTxt" onKeyReleased="#onSearchTextChanged" prefHeight="-1.0" prefWidth="456.0" promptText="Search by name or surname" HBox.margin="$x2" />
+          </children>
+        </HBox>
+        <HBox prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <TableView id="table-details" fx:id="customersTable" prefHeight="-1.0" prefWidth="-1.0" HBox.margin="$x2">
+              <columns>
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="81.0" text="Cognome" fx:id="surnameCol" />
+                <TableColumn prefWidth="75.0" text="Nome" fx:id="nameCol" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="132.0" text="CF" fx:id="codiceFiscaleCol" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="95.0" text="Telefono" fx:id="telephoneCol" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" text="Nato il" fx:id="birthdayCol" />
+              </columns>
+              <effect>
+                <DropShadow blurType="GAUSSIAN" color="#81827b" radius="7.6" spread="0.1" width="16.2" />
+              </effect>
+            </TableView>
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+    <VBox id="VBox" alignment="CENTER" spacing="5.0">
+      <children>
+        <HBox prefHeight="-1.0" prefWidth="-1.0" />
+        <HBox fx:id="rightPane" minHeight="-1.0" prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <AnchorPane id="customer-container" fx:id="customerDetails" prefHeight="-1.0" prefWidth="-1.0">
+              <children>
+                <Label id="card_name" fx:id="cardNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="46.0" prefHeight="27.0" prefWidth="212.0" textAlignment="LEFT" textOverrun="CLIP">
+                  <font>
+                    <Font name="Corbel Bold" size="17.0" />
+                  </font>
+                  <textFill>
+                    <Color blue="0.15" green="0.15" red="0.13" fx:id="x1" />
+                  </textFill>
+                </Label>
+                <Text fill="$x1" layoutX="25.0" layoutY="120.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Nato il :" />
+                <Label fx:id="birthdayLabel" layoutX="79.0" layoutY="105.0" prefHeight="20.0" prefWidth="122.7" textFill="$x1" />
+                <Text fill="$x1" layoutX="25.0" layoutY="200.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" wrappingWidth="45.0" />
+                <Label fx:id="emailLabel" layoutX="68.0" layoutY="184.0" prefHeight="21.0" prefWidth="173.0" textFill="$x1" />
+                <Text fill="$x1" layoutX="28.0" layoutY="138.0" scaleX="1.0" scaleY="1.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Durata abbonamento :" />
+                <Label fx:id="durationLabel" layoutX="155.0" layoutY="122.0" prefHeight="21.0" prefWidth="72.0" textFill="$x1" />
+                <Text fill="$x1" layoutX="25.0" layoutY="181.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo abbonamento :" />
+                <Label fx:id="typeLabel" layoutX="142.0" layoutY="165.0" prefHeight="20.0" prefWidth="95.25" textFill="$x1" />
+                <ImageView fx:id="programIcon" blendMode="SRC_OVER" fitHeight="44.0" fitWidth="44.0" focusTraversable="false" layoutX="98.0" layoutY="278.0" onMouseClicked="#callProgramView" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@images/icons/icons8-statistics-64.png" />
+                  </image>
+                </ImageView>
+                <Label fx:id="signInLabel" layoutX="101.0" layoutY="145.0" prefHeight="20.0" prefWidth="133.0" text="20/20/2000" textFill="$x1" />
+                <Text fill="#212426" layoutX="25.0" layoutY="160.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Data inizo :" />
+              </children>
+              <HBox.margin>
+                <Insets left="30.0" right="30.0" />
+              </HBox.margin>
+            </AnchorPane>
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@instructor_interface.css" />
+    <URL value="@trainingProgram_interface.css" />
+  </stylesheets>
+</HBox>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="330.0" prefWidth="542.0" spacing="16.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="24.0">
+         <children>
+            <VBox prefHeight="330.0" prefWidth="281.0" spacing="16.0">
+               <children>
+                  <Label fx:id="lblnome" text="Nome Attrezzo" />
+                  <TextField fx:id="txtname" />
+                  <Label fx:id="lblDescrizione" text="Descrizione" />
+                  <TextArea fx:id="txtdescrizione" prefHeight="120.0" prefWidth="149.0" />
+               </children>
+               <padding>
+                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="330.0" prefWidth="247.0" spacing="16.0">
+               <children>
+                  <Label fx:id="lblmanutenzione" text="Periodo Manutenzione (Mensili 0-12)" />
+                  <TextField fx:id="txtmanutenzione" />
+                  <Label fx:id="lblNumSerie" text="Numero di Serie" />
+                  <TextField fx:id="txtnumserie" />
+                  <Button fx:id="btncrea" mnemonicParsing="false" onAction="#create" prefHeight="25.0" prefWidth="83.0" text="Crea" />
+               </children>
+               <padding>
+                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="228.0" layoutY="15.0" prefHeight="758.0" prefWidth="560.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+         <children>
+            <VBox spacing="4.0">
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+               <children>
+                  <TextField fx:id="txtSearchEmployee" onKeyReleased="#onSearchTextChanged" promptText="Trova impiegato..." />
+                  <ListView fx:id="lstEmployee" onMouseClicked="#onFormInputChange" prefHeight="120.0" />
+               </children>
+            </VBox>
+            <GridPane minHeight="220.0" prefHeight="240.0" prefWidth="546.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox spacing="4.0" GridPane.valignment="TOP">
+                     <children>
+                        <RadioButton fx:id="radRecurring" mnemonicParsing="false" onAction="#onFormInputChange" selected="true" text="Ricorrente">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="recurring" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="6.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <children>
+                              <CheckBox fx:id="chkMonday" mnemonicParsing="false" onAction="#onFormInputChange" text="Lunedì" />
+                              <CheckBox fx:id="chkTuesday" mnemonicParsing="false" onAction="#onFormInputChange" text="Martedì" />
+                              <CheckBox fx:id="chkWednesday" mnemonicParsing="false" onAction="#onFormInputChange" text="Mercoledì" />
+                              <CheckBox fx:id="chkThursday" mnemonicParsing="false" onAction="#onFormInputChange" text="Giovedì" />
+                              <CheckBox fx:id="chkFriday" mnemonicParsing="false" onAction="#onFormInputChange" text="Venerdì" />
+                              <CheckBox fx:id="chkSaturday" mnemonicParsing="false" onAction="#onFormInputChange" text="Sabato" />
+                              <CheckBox fx:id="chkSunday" mnemonicParsing="false" onAction="#onFormInputChange" text="Domenica" />
+                           </children>
+                           <padding>
+                              <Insets left="16.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox spacing="4.0" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                     <children>
+                        <RadioButton fx:id="radOneTime" mnemonicParsing="false" onAction="#onFormInputChange" text="Una volta" toggleGroup="$recurring" />
+                        <DatePicker fx:id="dateOneTime" onKeyReleased="#onFormInputChange">
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </DatePicker>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="8.0" top="8.0" />
+               </padding>
+            </GridPane>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox spacing="4.0">
+                     <children>
+                        <Label text="Orario inizio" />
+                        <TextField fx:id="txtTimeStart" onKeyReleased="#onFormInputChange" promptText="hh:mm">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <VBox spacing="4.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label text="Orario fine" />
+                        <TextField fx:id="txtTimeEnd" onKeyReleased="#onFormInputChange" promptText="hh:mm">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="16.0" top="16.0" />
+               </padding>
+            </GridPane>
+            <VBox spacing="4.0">
+               <children>
+                  <Label text="Commento" />
+                  <TextArea fx:id="txtComment" prefHeight="120.0" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="76.0" spacing="4.0">
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+               <children>
+                  <Button fx:id="btnSave" alignment="BOTTOM_RIGHT" defaultButton="true" disable="true" mnemonicParsing="false" onMouseClicked="#onSaveClicked" text="Salva" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

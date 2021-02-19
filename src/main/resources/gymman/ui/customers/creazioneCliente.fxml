@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="form" layoutX="29.0" layoutY="44.0" prefHeight="318.0" prefWidth="367.0" spacing="40.0">
+         <children>
+            <VBox prefHeight="295.0" prefWidth="142.0" spacing="16.0">
+               <children>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Nome" />
+                        <TextField fx:id="txfFirstName" onKeyReleased="#onTextChange" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Data di nascita" />
+                        <TextField fx:id="txfBirthdate" onKeyReleased="#onTextChange" promptText="gg/mm/aaaa" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Email" />
+                        <TextField fx:id="txfEmail" onKeyReleased="#onTextChange" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Nome utente" />
+                        <TextField fx:id="txfUsername" onKeyReleased="#onTextChange" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="295.0" prefWidth="158.0" spacing="16.0">
+               <children>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Cognome" />
+                        <TextField fx:id="txfLastName" onKeyReleased="#onTextChange" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Sesso" />
+                        <ComboBox fx:id="cmbGender" onAction="#onComboBoxChange" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Codice fiscale" />
+                        <TextField fx:id="txfFiscalCode" onKeyReleased="#onTextChange" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Telefono" />
+                        <TextField fx:id="txfTelephoneNumber" onKeyReleased="#onTextChange" />
+                     </children>
+                  </VBox>
+                  <HBox>
+                     <children>
+                        <Button fx:id="btnCreate" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#create" text="Crea" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="221.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox maxHeight="-Infinity">
+         <children>
+            <HBox>
+               <children>
+                  <VBox prefWidth="100.0" />
+                  <VBox prefWidth="100.0">
+                     <children>
+                        <Label fx:id="lbllogin" text="Effettua il Login" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <VBox spacing="20.0">
+                     <children>
+                        <Label fx:id="lblEmail" text="Email" />
+                        <Label fx:id="desclbl" text="UserName" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <TextField fx:id="txtEmail" />
+                        <TextField fx:id="txtUserName" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox>
+               <children>
+                  <VBox prefWidth="100.0" />
+                  <VBox prefWidth="100.0">
+                     <children>
+                        <Button fx:id="btnlogin" mnemonicParsing="false" onAction="#loginClient" prefHeight="25.0" prefWidth="83.0" text="Login" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

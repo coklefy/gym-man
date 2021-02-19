@@ -1,0 +1,25 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.side-bar {
+	-fx-background-color: #83cdff;
+}
+
+.menu {
+	-fx-background-color: #6fb0db;
+}
+
+.top-bar {
+	-fx-background-color: rgb(255, 152, 152);
+}
+
+.menu-button {
+	-fx-padding: 4 8;
+}
+
+.back-button:hover {
+	-fx-fill: rgb(252, 235, 5);
+}
+
+.card {
+	-fx-background-color: #fff;
+}

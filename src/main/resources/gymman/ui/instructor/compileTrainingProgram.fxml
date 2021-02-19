@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-stylesheet trainingProgram_interface.css?>
+
+<VBox id="VBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" spacing="5.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <HBox prefHeight="-1.0" prefWidth="-1.0">
+      <children>
+        <VBox prefHeight="21.0" prefWidth="542.0" />
+        <VBox prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onMouseClicked="#saveTrainingProgram" text="Salva">
+              <VBox.margin>
+                <Insets />
+              </VBox.margin>
+            </Button>
+          </children>
+        </VBox>
+        <VBox prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#backToInstructorPage" text="Cancella" />
+          </children>
+        </VBox>
+      </children>
+      <VBox.margin>
+        <Insets bottom="3.0" />
+      </VBox.margin>
+    </HBox>
+    <HBox prefHeight="-1.0" prefWidth="-1.0">
+      <children>
+        <VBox id="customerData" alignment="CENTER" spacing="5.0">
+          <children>
+            <VBox prefHeight="-1.0" prefWidth="-1.0">
+              <children>
+                <HBox prefHeight="35.0" prefWidth="-1.0">
+                  <children>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label prefWidth="-1.0" text="Nome/cognome : " />
+                      </children>
+                    </VBox>
+                    <VBox prefHeight="200.0" prefWidth="100.0">
+                      <children>
+                        <Label fx:id="nameLabel" alignment="CENTER_LEFT" contentDisplay="RIGHT" prefWidth="-1.0" text="" wrapText="true">
+                          <VBox.margin>
+                            <Insets left="10.0" fx:id="x1" />
+                          </VBox.margin>
+                        </Label>
+                      </children>
+                    </VBox>
+                  </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="-1.0">
+                  <children>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label prefWidth="-1.0" text="Telefono : " />
+                      </children>
+                    </VBox>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label fx:id="contactLabel" alignment="CENTER_LEFT" prefWidth="-1.0" text="" wrapText="false" VBox.margin="$x1" />
+                      </children>
+                    </VBox>
+                  </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="-1.0">
+                  <children>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label prefWidth="-1.0" text="Tipo abbonamento : " />
+                      </children>
+                    </VBox>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label fx:id="typeLabel" alignment="CENTER_LEFT" prefWidth="-1.0" text="" VBox.margin="$x1" />
+                      </children>
+                    </VBox>
+                  </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="-1.0">
+                  <children>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label prefWidth="-1.0" text="Istruttore : " />
+                      </children>
+                    </VBox>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label fx:id="instructorLabel" alignment="CENTER_LEFT" contentDisplay="TOP" prefWidth="-1.0" text="" VBox.margin="$x1" />
+                      </children>
+                    </VBox>
+                  </children>
+                </HBox>
+              </children>
+            </VBox>
+            <VBox prefHeight="-1.0" prefWidth="-1.0">
+              <children>
+                <HBox prefHeight="35.0" prefWidth="-1.0">
+                  <children>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label prefWidth="-1.0" text="Dalla data :" />
+                      </children>
+                    </VBox>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <DatePicker fx:id="fromDateP" />
+                      </children>
+                    </VBox>
+                  </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="-1.0">
+                  <children>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label text="Al :" />
+                      </children>
+                    </VBox>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <DatePicker fx:id="toDateP" onAction="#isPeriodValidationCorrect" />
+                      </children>
+                    </VBox>
+                  </children>
+                </HBox>
+                <HBox prefHeight="38.0" prefWidth="-1.0">
+                  <children>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label prefWidth="-1.0" text="Durata della scheda : " />
+                      </children>
+                    </VBox>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label fx:id="durationLabel" alignment="CENTER_LEFT" prefHeight="-1.0" prefWidth="-1.0" text="" VBox.margin="$x1" />
+                      </children>
+                    </VBox>
+                  </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="-1.0">
+                  <children>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label text="Goal : " />
+                      </children>
+                    </VBox>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <ComboBox fx:id="goalCombo" VBox.margin="$x1" />
+                      </children>
+                    </VBox>
+                  </children>
+                </HBox>
+              </children>
+            </VBox>
+          </children>
+          <padding>
+            <Insets left="10.0" top="10.0" fx:id="x2" />
+          </padding>
+          <HBox.margin>
+            <Insets right="10.0" />
+          </HBox.margin>
+        </VBox>
+        <VBox id="customerExercises" alignment="CENTER" prefHeight="-1.0" spacing="10.0">
+          <children>
+            <HBox prefHeight="-1.0" prefWidth="-1.0">
+              <children>
+                <VBox padding="$x2" prefHeight="-1.0" prefWidth="-1.0">
+                  <children>
+                    <HBox prefHeight="35.0" prefWidth="-1.0">
+                      <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                          <children>
+                            <Label prefWidth="-1.0" text="Denominazione:" />
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="45.0" prefWidth="-1.0">
+                          <children>
+                            <TextField fx:id="exerciseTextField" prefWidth="-1.0" />
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox prefHeight="35.0" prefWidth="-1.0">
+                      <children>
+                        <VBox prefHeight="-1.0" prefWidth="-1.0">
+                          <children>
+                            <Label text="Categoria :" />
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="-1.0" prefWidth="-1.0">
+                          <children>
+                            <ComboBox fx:id="categoryCombo">
+                              <VBox.margin>
+                                <Insets left="10.0" fx:id="x1" />
+                              </VBox.margin>
+                            </ComboBox>
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox prefHeight="35.0" prefWidth="-1.0">
+                      <children>
+                        <VBox prefHeight="-1.0" prefWidth="-1.0">
+                          <children>
+                            <Label text="Tipo :" />
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="-1.0" prefWidth="-1.0">
+                          <children>
+                            <ComboBox fx:id="typeCombo">
+                              <VBox.margin>
+                                <Insets left="10.0" fx:id="x1" />
+                              </VBox.margin>
+                            </ComboBox>
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox prefHeight="35.0" prefWidth="-1.0">
+                      <children>
+                        <VBox prefHeight="-1.0" prefWidth="-1.0">
+                          <children>
+                            <Label text="Metrica :" />
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="-1.0" prefWidth="-1.0">
+                          <children>
+                            <ComboBox fx:id="metricCombo" onAction="#hideOnSelectedMetric">
+                              <VBox.margin>
+                                <Insets left="10.0" fx:id="x1" />
+                              </VBox.margin>
+                            </ComboBox>
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox prefHeight="35.0" prefWidth="-1.0">
+                      <children>
+                        <VBox prefHeight="-1.0" prefWidth="-1.0">
+                          <children>
+                            <Label id="minuteLabel" fx:id="secondsLabel" text="Secondi :" />
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                          <children>
+                            <TextField fx:id="secondsField" prefWidth="86.0">
+                              <VBox.margin>
+                                <Insets left="10.0" fx:id="x1" />
+                              </VBox.margin>
+                            </TextField>
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox prefHeight="35.0" prefWidth="-1.0">
+                      <children>
+                        <VBox prefHeight="-1.0" prefWidth="-1.0">
+                          <children>
+                            <Label id="repetitionLabel" fx:id="repetitionsLabel" text="Ripetizioni :" />
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                          <children>
+                            <TextField id="secondsField" fx:id="repetitionsField" prefWidth="-1.0">
+                              <VBox.margin>
+                                <Insets left="10.0" fx:id="x1" />
+                              </VBox.margin>
+                            </TextField>
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                    <HBox prefHeight="35.0" prefWidth="-1.0">
+                      <children>
+                        <VBox prefHeight="-1.0" prefWidth="-1.0">
+                          <children>
+                            <Label text="Sets :" />
+                          </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                          <children>
+                            <TextField id="secondsField" fx:id="setsField" prefWidth="86.0">
+                              <VBox.margin>
+                                <Insets left="10.0" fx:id="x1" />
+                              </VBox.margin>
+                            </TextField>
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+                <VBox prefHeight="-1.0" prefWidth="-1.0">
+                  <children>
+                    <ImageView fitHeight="208.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@images/exercise1.png" />
+                      </image>
+                    </ImageView>
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" spacing="5.0">
+              <children>
+                <VBox prefHeight="-1.0" prefWidth="-1.0">
+                  <children>
+                    <Button fx:id="addButton" mnemonicParsing="false" onMouseClicked="#addExercise" text="Aggiungi l'esercizio nella lista" />
+                  </children>
+                  <HBox.margin>
+                    <Insets right="50.0" />
+                  </HBox.margin>
+                </VBox>
+                <VBox prefHeight="-1.0" prefWidth="-1.0">
+                  <children>
+                    <Label text="Esercizi totali nella lista :" />
+                    <Label fx:id="exSizeLabel" prefWidth="9.9998779296875" text="" />
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+          </children>
+        </VBox>
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@trainingProgram_interface.css" />
+  </stylesheets>
+</VBox>
