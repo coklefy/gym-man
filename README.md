@@ -18,3 +18,5 @@ The user permissions are handled by a username and role database, and after veri
 
 _username: tutor  |  password: tutor123_
 
+> Project of course: Object-Oriented Programming ([unibo](https://www.unibo.it/it))
+
